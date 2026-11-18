@@ -1,0 +1,319 @@
+/* =========================================================
+   1. RESET & VARIABEL WARNA (CSS VARIABLES)
+   ========================================================= */
+:root {
+  --green-primary: #63B638;
+  --green-dark: #4E9629;
+  --orange-primary: #EB7B3B;
+  --orange-tab: #F39C4F;
+  --yellow-star: #F2C94C;
+  --text-dark: #1F2421;
+  --text-muted: #5A626A;
+  --bg-white: #FFFFFF;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  line-height: 1.45;
+}
+
+/* Container pembatas lebar halaman agar rapi di tengah */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================================================
+   2. NAVBAR (HEADER)
+   ========================================================= */
+.navbar {
+  background-color: var(--bg-white);
+  padding: 18px 0;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 44px;
+  background-color: var(--green-primary);
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.brand-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--green-primary);
+  letter-spacing: -0.3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--green-primary);
+}
+
+.nav-link.active {
+  background-color: var(--green-primary);
+  color: var(--bg-white);
+  font-weight: 600;
+}
+
+/* =========================================================
+   3. HERO BANNER ("Mau Tukar Apa Hari Ini?")
+   ========================================================= */
+.hero-section {
+  background-color: var(--green-primary);
+  padding: 28px 0;
+}
+
+.hero-card {
+  background-color: var(--bg-white);
+  border-radius: 12px;
+  min-height: 190px;
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.hero-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--orange-primary);
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Dekorasi Bintang (Sparkles) */
+.sparkles {
+  position: relative;
+  width: 90px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.sparkle {
+  fill: var(--yellow-star);
+  position: absolute;
+}
+
+.sparkles-left .sparkle-sm {
+  width: 34px;
+  height: 34px;
+  top: 4px;
+  left: 52px;
+}
+
+.sparkles-left .sparkle-lg {
+  width: 72px;
+  height: 72px;
+  bottom: 0;
+  left: 0;
+}
+
+.sparkles-right .sparkle-md {
+  width: 56px;
+  height: 56px;
+  top: 8px;
+  left: 4px;
+}
+
+.sparkles-right .sparkle-xs {
+  width: 32px;
+  height: 32px;
+  bottom: 6px;
+  right: 4px;
+}
+
+/* =========================================================
+   4. FILTER KATEGORI (TABS)
+   ========================================================= */
+.main-content {
+  padding-top: 28px;
+  padding-bottom: 64px;
+}
+
+.category-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 920px;
+  margin: 0 auto 36px auto;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  padding: 11px 26px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  background-color: #FFF3E8;
+  color: var(--orange-primary);
+}
+
+.tab-btn.active {
+  background-color: var(--orange-tab);
+  color: var(--bg-white);
+}
+
+/* =========================================================
+   5. GRID KATALOG PRODUK (5 KOLOM)
+   ========================================================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 28px;
+  row-gap: 40px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-image-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--bg-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.35;
+  margin-bottom: 8px;
+  /* Membatasi judul maksimal 2 baris agar tinggi kartu seragam */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.star-icon {
+  color: var(--yellow-star);
+  font-size: 14px;
+}
+
+.rating-value {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.point-badge {
+  margin-left: auto;
+  background-color: #EEF8E8;
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 11.5px;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+
+/* =========================================================
+   6. RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================================= */
+@media (max-width: 960px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero-card {
+    padding: 20px;
+    min-height: 140px;
+  }
+  .hero-title {
+    font-size: 22px;
+  }
+  .sparkles {
+    display: none;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 24px;
+  }
+}
