@@ -1,0 +1,31 @@
+:root {
+  --hijau: #66b538;
+  --hijau-muda: #8ad360;
+  --oren: #f79846;
+  --abu-biru: #303a40;
+  --hitam: #000000;
+  --putih: #ffffff;
+
+  --font-utama: "Inter", poppins, sans-serif;
+  --tebal-dikit: 400;
+  --tebal-biasa: 600;
+  --tebal-banget: 700;
+
+  --teks-kecil: 14px;
+  --teks-sedang: 16px;
+  --teks-besar: 20px;
+  --judul-h3: 24px;
+  --judul-h2: 36px;
+  --judul-h1: 52px;
+
+  --jarak-1: 8px;
+  --jarak-2: 16px;
+  --jarak-3: 24px;
+  --jarak-4: 40px;
+  --jarak-5: 80px;
+  --padding-samping: 60px;
+
+  --rounded-tipis: 8px;
+  --rounded-sedang: 16px;
+  --rounded-bulet: 99px;
+}
