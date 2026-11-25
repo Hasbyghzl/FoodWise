@@ -1,0 +1,239 @@
+/* Reset & Dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 16px 8%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #9ca3af;
+}
+
+nav .logo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav .logo img {
+  height: 38px;
+  width: auto;
+}
+
+nav .logo h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #73b733;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 28px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #73b733;
+}
+
+nav a[href*="keranjang"] {
+  background-color: #73b733;
+  color: #ffffff;
+  padding: 9px 28px;
+  border-radius: 6px;
+}
+
+nav a[href*="keranjang"]:hover {
+  background-color: #629f29;
+  color: #ffffff;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1.8px solid #1f2937;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-grid;
+  place-content: center;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #111111;
+  border-color: #111111;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.kategori {
+  max-width: 1000px;
+  margin: 28px auto 16px auto;
+  padding: 12px 24px;
+  background-color: #e6f4dc;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+  display: grid;
+  grid-template-columns: 36px 1fr 140px 110px 140px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.kategori label {
+  cursor: pointer;
+}
+
+.kategori p {
+  text-align: center;
+}
+
+.produk {
+  max-width: 1000px;
+  margin: 0 auto 24px auto;
+  padding: 0 24px;
+  background-color: #e6f4dc;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  align-items: center;
+}
+
+.produk > input[type="checkbox"] {
+  grid-column: 1;
+  margin: 14px 0;
+}
+
+.produk > label {
+  grid-column: 2;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 0;
+  cursor: pointer;
+}
+
+.produk > .item {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 36px 95px 1fr 140px 110px 140px;
+  align-items: center;
+  padding: 18px 0;
+  font-size: 14px;
+}
+
+.produk > label + .item {
+  border-top: 1px solid #c5d4ba;
+  margin: 0 -24px;
+  padding: 18px 24px;
+}
+
+.item img {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  background-color: #d9d9d9;
+  display: block;
+  font-size: 11px;
+  color: #555555;
+  text-align: center;
+}
+
+.item p {
+  text-align: center;
+}
+
+.checkout {
+  position: sticky;
+  bottom: 20px;
+  z-index: 100;
+  max-width: 1000px;
+  margin: 36px auto 36px auto;
+  padding: 14px 24px;
+  background-color: #e6f4dc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.checkout button {
+  background-color: #73b733;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.checkout button:hover {
+  background-color: #629f29;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 5%;
+  }
+
+  nav .logo {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 16px;
+  }
+
+  .kategori,
+  .produk,
+  .checkout {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .kategori {
+    display: none;
+  }
+
+  .produk > .item {
+    grid-template-columns: 32px 80px 1fr;
+    row-gap: 6px;
+  }
+
+  .item p {
+    grid-column: 3;
+    text-align: left;
+    padding-left: 12px;
+  }
+}
