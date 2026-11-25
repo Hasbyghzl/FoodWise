@@ -123,46 +123,6 @@ body {
   margin: 0 auto;
 }
 
-/* Dekorasi Bintang (Sparkles) */
-.sparkles {
-  position: relative;
-  width: 90px;
-  height: 120px;
-  flex-shrink: 0;
-}
-
-.sparkle {
-  fill: var(--yellow-star);
-  position: absolute;
-}
-
-.sparkles-left .sparkle-sm {
-  width: 34px;
-  height: 34px;
-  top: 4px;
-  left: 52px;
-}
-
-.sparkles-left .sparkle-lg {
-  width: 72px;
-  height: 72px;
-  bottom: 0;
-  left: 0;
-}
-
-.sparkles-right .sparkle-md {
-  width: 56px;
-  height: 56px;
-  top: 8px;
-  left: 4px;
-}
-
-.sparkles-right .sparkle-xs {
-  width: 32px;
-  height: 32px;
-  bottom: 6px;
-  right: 4px;
-}
 
 /* =========================================================
    4. FILTER KATEGORI (TABS)
