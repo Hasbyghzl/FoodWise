@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Food Wise</title>
+    <title>Daftar - Food Wise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,20 +14,32 @@
       rel="stylesheet"
       href="https://unpkg.com/lucide-static@latest/font/lucide.css"
     />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="../style/register.css" />
   </head>
   <body>
-    <main class="login-page">
+    <main class="register-page">
       <header class="brand-header">
-        <img src="logo.png" alt="Food Wise" class="brand-logo" />
+        <img src="../asset/FoodWise.png" alt="Food Wise" class="brand-logo" />
         <span class="brand-name">Food Wise</span>
       </header>
 
-      <section class="login-card" aria-labelledby="login-heading">
-        <h1 id="login-heading" class="login-title">Login</h1>
-        <p class="login-subtitle">Selamat datang kembali!</p>
+      <section class="register-card" aria-labelledby="register-heading">
+        <h1 id="register-heading" class="register-title">Daftar</h1>
+        <p class="register-subtitle">Daftar untuk bergabung ke FoodWise</p>
 
-        <form class="login-form" action="#" method="POST">
+        <form class="register-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="form-input"
+              placeholder="Masukan username anda"
+              required
+            />
+          </div>
+
           <div class="form-group">
             <label for="identifier" class="form-label"
               >Email/Nomor Telepon</label
@@ -64,21 +76,11 @@
             </div>
           </div>
 
-          <label class="checkbox-label" for="remember">
-            <input
-              type="checkbox"
-              id="remember"
-              name="remember"
-              class="checkbox-input"
-            />
-            <span>Ingat saya</span>
-          </label>
+          <button type="submit" class="btn-primary">Daftar</button>
 
-          <button type="submit" class="btn-primary">Login</button>
-
-          <p class="login-redirect">
-            Belum punya akun?
-            <a href="register.html" class="login-link">Klik ini!</a>
+          <p class="register-redirect">
+            Sudah punya akun?
+            <a href="login.html" class="register-link">Klik ini!</a>
           </p>
         </form>
       </section>
