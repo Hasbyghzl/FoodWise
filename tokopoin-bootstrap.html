@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodWise - Toko Poin</title>
+
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!--CSS-->>
+  <style>
+    :root {
+      --fw-green: #63B638;
+      --fw-green-dark: #4E9629;
+      --fw-green-soft: #EEF8E8;
+      --fw-orange: #EB7B3B;
+      --fw-orange-tab: #F39C4F;
+      --fw-orange-soft: #FFF3E8;
+      --fw-star: #F2C94C;
+      --fw-text: #1F2421;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--fw-text);
+      background-color: #FFFFFF;
+    }
+
+    .fw-container {
+      max-width: 1100px;
+    }
+
+    /* Brand & Navbar */
+    .fw-brand-logo {
+      width: 44px;
+      height: 40px;
+      background-color: var(--fw-green);
+      border-radius: 4px;
+    }
+
+    .fw-brand-name {
+      color: var(--fw-green);
+      letter-spacing: -0.3px;
+    }
+
+    .fw-nav-link {
+      color: var(--fw-text);
+      border-radius: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .fw-nav-link:hover {
+      color: var(--fw-green);
+    }
+
+    .fw-nav-link.active {
+      background-color: var(--fw-green) !important;
+      color: #FFFFFF !important;
+    }
+
+    /* Hero Banner */
+    .fw-hero-section {
+      background-color: var(--fw-green);
+    }
+
+    .fw-hero-card {
+      min-height: 180px;
+    }
+
+    .fw-hero-title {
+      color: var(--fw-orange);
+    }
+
+    /* Category Tabs */
+    .fw-tabs-wrap {
+      max-width: 920px;
+    }
+
+    .fw-tab-btn {
+      color: var(--fw-text);
+      border-radius: 9px;
+      transition: all 0.2s ease;
+    }
+
+    .fw-tab-btn:hover {
+      background-color: var(--fw-orange-soft);
+      color: var(--fw-orange);
+    }
+
+    .fw-tab-btn.active {
+      background-color: var(--fw-orange-tab) !important;
+      color: #FFFFFF !important;
+    }
+
+    /* Product Card */
+    .fw-product-card {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .fw-product-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .fw-product-title {
+      font-size: 0.84rem;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 2.3rem;
+    }
+
+    .fw-star {
+      color: var(--fw-star);
+    }
+
+    .fw-point-badge {
+      background-color: var(--fw-green-soft);
+      color: var(--fw-green-dark);
+      font-size: 0.72rem;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- 1. BAGIAN NAVBAR (HEADER) -->
+  <header id="home" class="bg-white sticky-top border-bottom border-light-subtle">
+    <nav class="navbar navbar-expand-md navbar-light py-3">
+      <div class="container fw-container px-3 px-md-4">
+        <a href="#home" class="navbar-brand d-flex align-items-center gap-3 fw-bold fs-4 m-0">
+          <span class="fw-brand-logo d-inline-block"></span>
+          <span class="fw-brand-name">FoodWise</span>
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Buka navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end mt-3 mt-md-0" id="mainNavbar">
+          <ul class="navbar-nav align-items-md-center gap-2 gap-md-3">
+            <li class="nav-item">
+              <a href="#home" class="nav-link fw-nav-link fw-medium px-3 py-2 fs-6">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#toko-poin" class="nav-link fw-nav-link active fw-semibold px-4 py-2 fs-6">Toko Poin</a>
+            </li>
+            <li class="nav-item">
+              <a href="#login" class="nav-link fw-nav-link fw-medium px-3 py-2 fs-6">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="fw-hero-section py-4" id="toko-poin">
+    <div class="container fw-container px-3 px-md-4">
+      <div class="fw-hero-card bg-white rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5">
+        <h1 class="fw-hero-title fw-bold fs-2 mb-0">Mau Tukar Apa Hari Ini?</h1>
+      </div>
+    </div>
+  </section>
+
+ 
+  <main class="container fw-container px-3 px-md-4 pt-4 pb-5">
+
+    <!-- Filter Kategori (Bootstrap Nav Pills - Tampilan Saja) -->
+    <ul class="nav nav-pills fw-tabs-wrap mx-auto justify-content-center justify-content-md-between gap-2 mb-4 pb-2">
+      <li class="nav-item">
+        <a href="keb_sehari.html" class="nav-link fw-tab-btn active fw-bold small px-4 py-2">Kebutuhan Keharian</a>
+      </li>
+      <li class="nav-item">
+        <a href="elek.html" class="nav-link fw-tab-btn fw-bold small px-4 py-2">Elektronik</a>
+      </li>
+      </li>
+      <li class="nav-item">
+        <a href="anak.html" class="nav-link fw-tab-btn fw-bold small px-4 py-2">Anak-Anak</a>
+      </li>
+      <li class="nav-item">
+        <a href="makananringan.html" class="nav-link fw-tab-btn fw-bold small px-4 py-2">Makanan Ringan</a>
+      </li>
+      <li class="nav-item">
+        <a href="voucher.html" class="nav-link fw-tab-btn fw-bold small px-4 py-2">Voucher</a>
+      </li>
+    </ul>
+
+
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 g-md-4">
+
+      <!-- Produk 1 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-1.jpg" alt="KEWPIE Salad Dressing Wijen Sangrai 1L" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">KEWPIE Salad Dressing dengan Wijen Sangrai 1L</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.5</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">450 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-2.jpg" alt="MamyPoko Pants X-tra Kering" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">MamyPoko Pants X-tra Kering All Size 1 Pack</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.8</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">600 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-3.jpg" alt="Paket 2 Bungkus Gula Tebu Rose Brand 1kg" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">Paket 2 Bungkus Gula Tebu Rose Brand 1kg</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.7</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">350 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Produk 4 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-4.jpg" alt="Paseo Smart Facial Tissue Buy 8 Get 2 Free" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">Paseo Smart Facial Tissue 390 Helai x 10 Pack</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.9</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">500 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Produk 5 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-5.jpg" alt="Minyak Goreng SunCo 2 Liter" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">Minyak Goreng SunCo Kemasan Pouch 2 Liter</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.8</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">400 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Produk 6 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-6.jpg" alt="Kopi Hitam Premium 1 Kg" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">Kopi Hitam Bubuk Premium Racikan Nikmat 1 Kg</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.6</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">550 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Produk 7 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-7.jpg" alt="Sunlight Jeruk Nipis 610gr x 4" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">Sunlight Pencuci Piring Jeruk Nipis 610gr x 4</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.9</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">480 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Produk 8 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-8.jpg" alt="Vixal Pembersih Kamar Mandi Ekstra Kuat x2" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">Vixal Pembersih Kerak Kamar Mandi 780ml x 2</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.7</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">320 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Produk 9 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-9.jpg" alt="Sleek Baby Bottle Nipple Cleanser Pouch 900ml" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">Sleek Baby Bottle &amp; Accessories Cleanser 900ml</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.9</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">420 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Produk 10 -->
+      <div class="col">
+        <article class="card border-0 h-100 fw-product-card">
+          <div class="ratio ratio-1x1 bg-white rounded-3 shadow-sm overflow-hidden mb-2">
+            <img src="images/produk-10.jpg" alt="Beras Super Rojolele 5 Kg" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body p-0 d-flex flex-column">
+            <h2 class="fw-product-title fw-bold mb-2">Beras Kepala Super Rojolele Kualitas Terbaik 5 Kg</h2>
+            <div class="d-flex align-items-center gap-1 mt-auto small text-secondary">
+              <span class="fw-star">★</span>
+              <span class="fw-semibold text-dark">4.8</span>
+              <span class="badge rounded-pill fw-point-badge fw-bold ms-auto px-2 py-1">750 Poin</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Bootstrap 5.3.3 Bundle JS (untuk tombol menu navbar responsif di mobile) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
