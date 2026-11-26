@@ -1,136 +1,199 @@
 <!doctype html>
 <html lang="id">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodWise</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../style/landing.css" />
   </head>
 
   <body>
     <!-- Navbar -->
     <header>
-      <nav class="navbar">
-        <a href="#home">
+      <nav class="navbar navbar-expand-md container">
+        <a class="navbar-brand" href="#home">
           <img src="../asset/Logo.png" alt="Logo FoodWise" />
           <span>FoodWise</span>
         </a>
-        <ul>
-          <li><a href="#home" class="aktif">Home</a></li>
-          <li><a href="toko-poin.html">Toko Poin</a></li>
-          <li><a href="login.html">Login</a></li>
-        </ul>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+          <ul class="navbar-nav">
+            <li><a class="nav-link aktif" href="#home">Home</a></li>
+            <li>
+              <a class="nav-link" href="tokopoin-bootstrap.html">Toko Poin</a>
+            </li>
+            <li><a class="nav-link" href="login.html">Login</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
     <main>
       <!-- Hero -->
-      <section id="home" class="hero">
+      <section id="home" class="hero container">
         <img src="../asset/Banner_fw.png" alt="Banner FoodWise" />
         <h1>Selamat Datang FoodWise</h1>
         <p>Ubah makanan sisa menjadi manfaat baru</p>
-        <div>
+        <div class="slogan">
           <p>Berawal dari Kecil Menjadi Semakin Besar</p>
         </div>
       </section>
 
-      <!-- edukasi/penjelasannyaak -->
-      <section id="limbah">
+      <!-- Limbah -->
+      <section id="limbah" class="container">
         <h2>Apa itu Limbah Makanan Sisa dan Dampaknya</h2>
         <p>
-          Limbah makanan sisa ialah makanan layal konsumsi yang tidak habis
+          Limbah makanan sisa ialah makanan layak konsumsi yang tidak habis
           <strong>dimakan</strong> atau <strong>terbuang</strong>. Jika
-          dibiarkan limbah ini bisa menjadi menumpuk, mengghasilkan gas rumah
-          kaca, membebani lingkungan, dan menyia-nyiakan sumber daya
+          dibiarkan, limbah ini bisa menumpuk, menghasilkan gas rumah kaca,
+          membebani lingkungan, dan menyia-nyiakan sumber daya.
         </p>
       </section>
 
-      <!-- solusi -->
-      <section id="solusi" class="solusi">
-        <img src="../asset/Profil.png" alt="Profil FoodWise" />
-        <div>
-          <h2 class="judul-solusi">Solusi</h2>
-          <p>
-            FoodWise adalah gerakan dan platform yang mengajak masyarakat untuk
-            lebih bijak mengelola makanan sisa.
-          </p>
-          <p>
-            Kami hadir dengan solusi sederhana dan berdampak nyata untuk
-            mengurangi limbah makanan serta menciptakan gaya hidup lebih ramah
-            lingkungan
-          </p>
+      <!-- Solusi -->
+      <section id="solusi" class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="../asset/Profil.png" alt="Profil FoodWise" />
+          </div>
+          <div class="col-md-6">
+            <h2 class="judul-solusi">Solusi</h2>
+            <p>
+              FoodWise adalah gerakan dan platform yang mengajak masyarakat
+              untuk lebih bijak mengelola makanan sisa.
+            </p>
+            <p>
+              Kami hadir dengan solusi sederhana dan berdampak nyata untuk
+              mengurangi limbah makanan serta menciptakan gaya hidup lebih ramah
+              lingkungan.
+            </p>
+          </div>
         </div>
       </section>
 
-      <!-- keuntungannya -->
+      <!-- Keuntungan -->
       <section id="keuntungan">
-        <h2>Keuntungan bergabung dengan FoodWise</h2>
-        <p>Lihat Berbagai Manfaat yang Bisa Didapatkan!</p>
+        <div class="container">
+          <h2>Keuntungan bergabung dengan FoodWise</h2>
+          <p>Lihat Berbagai Manfaat yang Bisa Didapatkan!</p>
+        </div>
 
-        <!--misi-->
         <div class="daftar-misi">
-          <article class="untung">
-            <h3>Ikut Misi</h3>
-            <img src="../asset/Misi.png" alt="Ikut Misi" />
-            <p>Selesaikan misi untuk poin tambahan</p>
-          </article>
+          <div class="container">
+            <div class="row justify-content-center g-4">
+              <div class="col-md-4 col-lg-3">
+                <article class="untung">
+                  <img src="../asset/Misi.png" alt="Ikut Misi" />
+                  <h3>Ikut Misi</h3>
+                  <p>Selesaikan misi untuk poin tambahan</p>
+                </article>
+              </div>
 
-          <!--bagian poin-->
-          <article class="untung">
-            <h3>Poin</h3>
-            <img src="../asset/Poin.png" alt="Poin" />
-            <p>Setiap setor sisa makanan dapat poin</p>
-          </article>
+              <div class="col-md-4 col-lg-3">
+                <article class="untung">
+                  <img src="../asset/Poin.png" alt="Poin" />
+                  <h3>Poin</h3>
+                  <p>Setiap setor sisa makanan dapat poin</p>
+                </article>
+              </div>
 
-          <!--bagian tuker reward-->
-          <article class="untung">
-            <h3>Tuker Reward</h3>
-            <img src="../asset/Reward.png" alt="Tuker Reward" />
-            <p>Poin ditukar minyak, beras, dll</p>
-          </article>
+              <div class="col-md-4 col-lg-3">
+                <article class="untung">
+                  <img src="../asset/Reward.png" alt="Tuker Reward" />
+                  <h3>Tuker Reward</h3>
+                  <p>Poin ditukar minyak, beras, dll</p>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Produknya yg dijual -->
-      <section id="produk">
+      <!-- Produk -->
+      <section id="produk" class="container">
         <h2>Produk Dijual</h2>
         <p>Beli produk hasil olahan!</p>
 
-        <div>
-          <article class="produk">
-            <img src="../asset/Pupuk.png" alt="Pupuk" />
-            <h3>Pupuk</h3>
-            <p>Harga</p>
-            <button type="button">Beli</button>
-          </article>
+        <div class="row justify-content-center g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="produk pupuk">
+              <img src="../asset/Pupuk.png" alt="Pupuk" />
+              <div class="info">
+                <div>
+                  <h3>Pupuk</h3>
+                  <p>Harga</p>
+                </div>
+                <button type="button" class="beli">Beli</button>
+              </div>
+            </article>
+          </div>
 
-          <article class="produk">
-            <img src="../asset/Maggot.png" alt="Maggot" />
-            <h3>Maggot</h3>
-            <p>Harga</p>
-            <button type="button">Beli</button>
-          </article>
+          <div class="col-md-6 col-lg-4">
+            <article class="produk maggot">
+              <img src="../asset/Maggot.png" alt="Maggot" />
+              <div class="info">
+                <div>
+                  <h3>Maggot</h3>
+                  <p>Harga</p>
+                </div>
+                <button type="button" class="beli">Beli</button>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
-      <div>
-        <h2>FoodWise</h2>
-      </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-3 logo-footer">
+            <img src="../asset/Logo.png" alt="Logo FoodWise" />
+            <h2>FoodWise</h2>
+          </div>
 
-      <div>
-        <h3>Contact</h3>
-        <ul>
-          <li><a href="tel:15005724356">1500 572 4356</a></li>
-          <li><a href="mailto:Foodwise@gmail.com">Foodwise@gmail.com</a></li>
-          <li><a href="https://wa.me/621234567891">+62 123-4567-8911</a></li>
-        </ul>
-      </div>
+          <div class="col-md-5">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="tel:15005724356">1500 572 4356</a></li>
+              <li>
+                <a href="mailto:Foodwise@gmail.com">Foodwise@gmail.com</a>
+              </li>
+              <li>
+                <a href="https://wa.me/6212345678911">+62 123-4567-8911</a>
+              </li>
+            </ul>
+          </div>
 
-      <div>
-        <h3>Lokasi</h3>
-        <address>Jl. Mangga No. 12, Perumahan Apel Indah, Kota Depok.</address>
+          <div class="col-md-4 lokasi">
+            <h3>Lokasi</h3>
+            <address>
+              Jl. Mangga No. 12, Perumahan Apel Indah, Kota Depok.
+            </address>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
