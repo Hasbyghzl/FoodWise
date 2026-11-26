@@ -1,0 +1,1 @@
+page keranjang, melanjutkan dari page toko poin, apabila user ingin "checkout" salah satu atau lebih barang dari toko poin, user memasukannya ke dalam keranjang dan checkout barang barang tersebut dari page keranjang. di page keranjang terdapat navbar untuk mengarah kembali ke home, toko poin atau login/profile user
